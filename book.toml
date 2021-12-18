@@ -4,3 +4,5 @@ language = "en"
 multilingual = false
 src = "src"
 title = "The Yex Programming Language"
+[build]
+build-dir = "docs"
