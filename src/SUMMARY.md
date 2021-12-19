@@ -13,6 +13,7 @@
 - [cool features](./cool-features.md)
     - [pipe](./chapter-3/pipe.md)
     - [partial application](./chapter-3/partial_applications.md)
+    - [become and tail function](./chapter-3/become.md)
 - [error handling](./error_handling.md)
     - [errors](./chapter-4/errors_in_yex.md)
 - [file IO](./fileio.md)

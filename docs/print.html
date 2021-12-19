@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>yex programming language</title>
+        <title>The Yex Programming Language</title>
         <meta name="robots" content="noindex" />
 
 
@@ -82,7 +82,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="installation.html"><strong aria-hidden="true">1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="yex-language.html"><strong aria-hidden="true">2.</strong> Getting Started</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="chapter-1/hello_world.html"><strong aria-hidden="true">2.1.</strong> Hello World</a></li><li class="chapter-item expanded "><a href="chapter-1/variables.html"><strong aria-hidden="true">2.2.</strong> Variables</a></li><li class="chapter-item expanded "><a href="chapter-1/if-else.html"><strong aria-hidden="true">2.3.</strong> if else</a></li><li class="chapter-item expanded "><a href="chapter-1/functions.html"><strong aria-hidden="true">2.4.</strong> functions</a></li></ol></li><li class="chapter-item expanded "><a href="chapter-2.html"><strong aria-hidden="true">3.</strong> Data Types</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="chapter-2/num.html"><strong aria-hidden="true">3.1.</strong> num</a></li><li class="chapter-item expanded "><a href="chapter-2/tables.html"><strong aria-hidden="true">3.2.</strong> tables</a></li><li class="chapter-item expanded "><a href="chapter-2/lists.html"><strong aria-hidden="true">3.3.</strong> lists</a></li></ol></li><li class="chapter-item expanded "><a href="cool-features.html"><strong aria-hidden="true">4.</strong> cool features</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="chapter-3/pipe.html"><strong aria-hidden="true">4.1.</strong> pipe</a></li><li class="chapter-item expanded "><a href="chapter-3/partial_applications.html"><strong aria-hidden="true">4.2.</strong> partial application</a></li></ol></li><li class="chapter-item expanded "><a href="error_handling.html"><strong aria-hidden="true">5.</strong> error handling</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="chapter-4/errors_in_yex.html"><strong aria-hidden="true">5.1.</strong> errors</a></li></ol></li><li class="chapter-item expanded "><a href="fileio.html"><strong aria-hidden="true">6.</strong> file IO</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="chapter-5/files.html"><strong aria-hidden="true">6.1.</strong> files</a></li><li class="chapter-item expanded "><a href="chapter-5/folders.html"><strong aria-hidden="true">6.2.</strong> folders</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="installation.html"><strong aria-hidden="true">1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="yex-language.html"><strong aria-hidden="true">2.</strong> Getting Started</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="chapter-1/hello_world.html"><strong aria-hidden="true">2.1.</strong> Hello World</a></li><li class="chapter-item expanded "><a href="chapter-1/variables.html"><strong aria-hidden="true">2.2.</strong> Variables</a></li><li class="chapter-item expanded "><a href="chapter-1/if-else.html"><strong aria-hidden="true">2.3.</strong> if else</a></li><li class="chapter-item expanded "><a href="chapter-1/functions.html"><strong aria-hidden="true">2.4.</strong> functions</a></li></ol></li><li class="chapter-item expanded "><a href="chapter-2.html"><strong aria-hidden="true">3.</strong> Data Types</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="chapter-2/num.html"><strong aria-hidden="true">3.1.</strong> num</a></li><li class="chapter-item expanded "><a href="chapter-2/tables.html"><strong aria-hidden="true">3.2.</strong> tables</a></li><li class="chapter-item expanded "><a href="chapter-2/lists.html"><strong aria-hidden="true">3.3.</strong> lists</a></li></ol></li><li class="chapter-item expanded "><a href="cool-features.html"><strong aria-hidden="true">4.</strong> cool features</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="chapter-3/pipe.html"><strong aria-hidden="true">4.1.</strong> pipe</a></li><li class="chapter-item expanded "><a href="chapter-3/partial_applications.html"><strong aria-hidden="true">4.2.</strong> partial application</a></li><li class="chapter-item expanded "><a href="chapter-3/become.html"><strong aria-hidden="true">4.3.</strong> become and tail function</a></li></ol></li><li class="chapter-item expanded "><a href="error_handling.html"><strong aria-hidden="true">5.</strong> error handling</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="chapter-4/errors_in_yex.html"><strong aria-hidden="true">5.1.</strong> errors</a></li></ol></li><li class="chapter-item expanded "><a href="fileio.html"><strong aria-hidden="true">6.</strong> file IO</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="chapter-5/files.html"><strong aria-hidden="true">6.1.</strong> files</a></li><li class="chapter-item expanded "><a href="chapter-5/folders.html"><strong aria-hidden="true">6.2.</strong> folders</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -111,7 +111,7 @@
                         </button>
                     </div>
 
-                    <h1 class="menu-title">yex programming language</h1>
+                    <h1 class="menu-title">The Yex Programming Language</h1>
 
                     <div class="right-buttons">
                         <a href="print.html" title="Print this book" aria-label="Print this book">
@@ -471,6 +471,28 @@ let _ =
 20
 </code></pre>
 <p>See? its pretty cool!</p>
+<div style="break-before: page; page-break-before: always;"></div><p>The Become Keyword allows you to have recursion, Google: 
+<code>In computer science, a tail call is a subroutine call performed as the final action of a procedure. If the target of a tail is the same subroutine, the subroutine is said to be tail recursive, which is a special case of direct recursion. Tail recursion is particularly useful, and often easy to handle optimization in </code>. lets take a look at it</p>
+<pre><code class="language-ml">let for_each cb arr = 
+	let loop current max array callback myself = 
+		callback(array[current])
+		&gt;&gt; if current == max then 
+			0
+		else 
+			become myself(current+1, max, array, callback, myself)
+
+	in loop(0, #arr-1, arr, cb, loop) 
+
+let _ =
+    [1, 2, 3]
+    |&gt; for_each(puts)
+</code></pre>
+<p>Output:</p>
+<pre><code>1
+2
+3
+</code></pre>
+<p>in this example, we created the <code>for_each</code> function, used to run a function with with the arg being an element of the array</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="learn-how-to-handle-errors-in-yex"><a class="header" href="#learn-how-to-handle-errors-in-yex">Learn how to handle errors in Yex</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><p>Errors in Yex are represented by the :err and the :ok type. lets create a function that returns an error when a value is an integer to demonstrate how errors work in Yex</p>
 <pre><code class="language-ml">let function arg = 
