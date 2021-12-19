@@ -8,7 +8,7 @@ Installation steps for Linux
 
 ### ArchLinux
 
-in ArchLinux you can install arch through pacman 
+in ArchLinux you can install Rust through pacman 
 ```
 # pacman -S rust 
 ```
@@ -45,5 +45,5 @@ cargo install --git https://github.com/nonamescm/yex-lang.git
 yex is installed in the `cargo` bin directory, not in `/usr/bin/`, therefore you wont be able to run `yex`, to fix this simply add this line to your .bashrc/.zshrc
  
 ```
-export PATH=/home/<user_user>/.cargo/bin:$PATH
+export PATH=/home/<your_user>/.cargo/bin:$PATH
 ```

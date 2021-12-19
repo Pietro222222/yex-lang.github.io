@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>tables</title>
+        <title>tables - yex programming language</title>
 
 
         <!-- Custom HTML head -->
@@ -110,7 +110,7 @@
                         </button>
                     </div>
 
-                    <h1 class="menu-title"></h1>
+                    <h1 class="menu-title">yex programming language</h1>
 
                     <div class="right-buttons">
                         <a href="../print.html" title="Print this book" aria-label="Print this book">
@@ -171,6 +171,14 @@
 <pre><code>20
 </code></pre>
 <p>Thats it! tables are pretty simple yet powerful!</p>
+<h1 id="json"><a class="header" href="#json">JSON</a></h1>
+<p>to use jsons in Yex, you'll use the <code>fromjson</code> function! lets take a look </p>
+<pre><code class="language-ml">let _ = 
+    fromjson(&quot;{\&quot;item\&quot;: \&quot;thing\&quot;}&quot;)
+    |&gt; puts
+</code></pre>
+<h3 id="note"><a class="header" href="#note">NOTE</a></h3>
+<p><code>fromjson</code> cant parse empty json, so <code>{}</code> might give you an error!</p>
 
                     </main>
 

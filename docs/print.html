@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title></title>
+        <title>yex programming language</title>
         <meta name="robots" content="noindex" />
 
 
@@ -111,7 +111,7 @@
                         </button>
                     </div>
 
-                    <h1 class="menu-title"></h1>
+                    <h1 class="menu-title">yex programming language</h1>
 
                     <div class="right-buttons">
                         <a href="print.html" title="Print this book" aria-label="Print this book">
@@ -148,7 +148,7 @@
 <h2 id="linux-rust-installation"><a class="header" href="#linux-rust-installation">Linux Rust Installation</a></h2>
 <p>Installation steps for Linux</p>
 <h3 id="archlinux"><a class="header" href="#archlinux">ArchLinux</a></h3>
-<p>in ArchLinux you can install arch through pacman </p>
+<p>in ArchLinux you can install Rust through pacman </p>
 <pre><code># pacman -S rust 
 </code></pre>
 <p>for more information take a look at <a href="https://wiki.archlinux.org/title/Rust">this</a></p>
@@ -167,7 +167,7 @@
 </code></pre>
 <h3 id="notes"><a class="header" href="#notes">Notes</a></h3>
 <p>yex is installed in the <code>cargo</code> bin directory, not in <code>/usr/bin/</code>, therefore you wont be able to run <code>yex</code>, to fix this simply add this line to your .bashrc/.zshrc</p>
-<pre><code>export PATH=/home/&lt;user_user&gt;/.cargo/bin:$PATH
+<pre><code>export PATH=/home/&lt;your_user&gt;/.cargo/bin:$PATH
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="what-is-yex"><a class="header" href="#what-is-yex">What is Yex?</a></h1>
 <p>Yex is a functional scripting language written in rust.</p>
@@ -392,6 +392,14 @@ true
 <pre><code>20
 </code></pre>
 <p>Thats it! tables are pretty simple yet powerful!</p>
+<h1 id="json"><a class="header" href="#json">JSON</a></h1>
+<p>to use jsons in Yex, you'll use the <code>fromjson</code> function! lets take a look </p>
+<pre><code class="language-ml">let _ = 
+    fromjson(&quot;{\&quot;item\&quot;: \&quot;thing\&quot;}&quot;)
+    |&gt; puts
+</code></pre>
+<h3 id="note-1"><a class="header" href="#note-1">NOTE</a></h3>
+<p><code>fromjson</code> cant parse empty json, so <code>{}</code> might give you an error!</p>
 <div style="break-before: page; page-break-before: always;"></div><p>Lists in Yex are basically arrays, but they're a little bit different. first of all they're immutable just like any yex variable (but we can add items to it). so lets take a look how to use them</p>
 <pre><code>let _ = 
     let my_array = [1, 2, 3]
@@ -502,7 +510,7 @@ let _ =
     fwrite(&quot;/path/to/file&quot;, &quot;content&quot;)
 </code></pre>
 <p>the fwrite functions returns an Error Type (:ok or :err), so it should be fine to handle errors</p>
-<h3 id="note-1"><a class="header" href="#note-1">note</a></h3>
+<h3 id="note-2"><a class="header" href="#note-2">note</a></h3>
 <p>when the fwrite function returns an error, it also returns the reason, example: </p>
 <pre><code class="language-ml">let _ = 
     fwrite(&quot;/root/test&quot;, &quot;content&quot;)

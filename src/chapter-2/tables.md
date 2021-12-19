@@ -39,3 +39,16 @@ output:
 ```
 
 Thats it! tables are pretty simple yet powerful!
+
+# JSON
+
+to use jsons in Yex, you'll use the `fromjson` function! lets take a look 
+
+```ml 
+let _ = 
+    fromjson("{\"item\": \"thing\"}")
+    |> puts
+```
+
+### NOTE
+`fromjson` cant parse empty json, so `{}` might give you an error!
